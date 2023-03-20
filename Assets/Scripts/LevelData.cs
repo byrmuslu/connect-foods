@@ -20,7 +20,5 @@ namespace ConnectFoods.Data
         public int columnCount;
         [Tooltip("Target Names : apple - leaf - banana - blob - baloon")] 
         public List<TargetObjective> targets;
-        public bool isCompleted;
-        public int highScore;
     }
 }

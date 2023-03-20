@@ -68,6 +68,5 @@ namespace ConnectFoods.State
             _boardManager.Tiles.ForEach(t => t.SetSelected(false));
             _boardManager.SelectedTile = null;
         }
-
     }
 }

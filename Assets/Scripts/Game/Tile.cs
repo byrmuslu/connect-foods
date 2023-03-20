@@ -24,10 +24,8 @@ namespace ConnectFoods.Game
         public bool IsSelected { get; private set; }
 
         public event Action<Tile> PointerDown;
-        public event Action<Tile> Dragging;
         public event Action<Tile> PointerUp;
         public event Action<Tile> PointerEnter;
-        public event Action<Tile> PointerExit;
 
         public event Action<Tile> Exploded;
         public event IPoolable.OnAddPool AddPool;
@@ -35,11 +33,6 @@ namespace ConnectFoods.Game
         private void OnMouseDown()
         {
             PointerDown?.Invoke(this);
-        }
-
-        private void OnMouseDrag()
-        {
-            Dragging?.Invoke(this);
         }
 
         private void OnMouseUp()
@@ -50,11 +43,6 @@ namespace ConnectFoods.Game
         private void OnMouseEnter()
         {
             PointerEnter?.Invoke(this);
-        }
-
-        private void OnMouseExit()
-        {
-            PointerExit?.Invoke(this);
         }
 
         public void SetSelected(bool isSelected)

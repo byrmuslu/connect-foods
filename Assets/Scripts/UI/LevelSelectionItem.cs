@@ -53,7 +53,7 @@ namespace ConnectFoods.UI
         {
             _levelData = levelData;
             _txtLevelIndex.text = levelData.level.ToString("00");
-            _txtHighscore.text = "Highscore<br>" + levelData.highScore;
+            _txtHighscore.text = "Highscore<br>" + PlayerPrefs.GetInt("Level-" + levelData.level, 0);
             _btn.interactable = isPlayable;
         }
 

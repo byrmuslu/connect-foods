@@ -144,27 +144,12 @@ namespace ConnectFoods.Manager
             return frequentlyObjectPrefab;
         }
 
-        public T GetObjectPrefab<T>() where T : BaseObject
-        {
-            return GetObjectPrefab<T>("");
-        }
-
         public T GetObjectPrefab<T>(string variantKey) where T : BaseObject
         {
             T objPrefab = Resources.LoadAll<T>("").FirstOrDefault(o => o is T && o.VariantKey == variantKey);
 
             if (objPrefab == null)
                 Debug.LogError($"Object not found! Type : {typeof(T).FullName} -- VariantKey : {variantKey}");
-
-            return objPrefab;
-        }
-
-        public T GetMonoBehaviourPrefab<T>() where T : MonoBehaviour
-        {
-            T objPrefab = Resources.LoadAll<T>("").FirstOrDefault(o => o is T);
-
-            if (objPrefab == null)
-                Debug.LogError($"Object not found! Type : {typeof(T).FullName}");
 
             return objPrefab;
         }

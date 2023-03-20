@@ -38,7 +38,7 @@ namespace ConnectFoods.UI
             for(int i = 0; i < levels.Count; i++)
             {
                 LevelSelectionItem item = resourcesManager.GetObject<LevelSelectionItem>(_contentParent);
-                item.SetItem(levels[i], i == 0 || levels[i-1].isCompleted);
+                item.SetItem(levels[i], i == 0 || PlayerPrefs.HasKey("Level-" + levels[i-1].level));
 
                 item.Selected += OnLevelItemSelected;
             }

@@ -53,11 +53,11 @@ namespace ConnectFoods.Manager
 
         private void OnLevelCompleted(int totalScore)
         {
-            _boardManager.CurrentLevelData.isCompleted = true;
+            int currentHighScore = PlayerPrefs.GetInt("Level-" + _boardManager.CurrentLevelData.level, 0);
 
-            if (totalScore > _boardManager.CurrentLevelData.highScore)
+            if (totalScore > currentHighScore)
             {
-                _boardManager.CurrentLevelData.highScore = totalScore;
+                PlayerPrefs.SetInt("Level-" + _boardManager.CurrentLevelData.level, totalScore);
                 Effect effect = _resourcesManager.GetObject<Effect>("confetti");
                 effect.PlayEffect(() =>
                 {
@@ -99,7 +99,7 @@ namespace ConnectFoods.Manager
         {
             _boardManager.SetBoard(levelData);
 
-            Camera.main.orthographicSize = Mathf.Clamp(((levelData.columnCount - 2) * 2), 6, 20);
+            Camera.main.orthographicSize = Mathf.Clamp(((levelData.columnCount - 1) * 2), 6, 20);
 
             InGamePanel inGamePanel = _resourcesManager.GetObject<InGamePanel>(BaseCanvas.Instance.transform);
             inGamePanel.SetBoardManager(_boardManager);

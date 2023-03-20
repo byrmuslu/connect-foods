@@ -4,7 +4,6 @@ namespace ConnectFoods.Manager
     using ConnectFoods.Game;
     using ConnectFoods.State;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
@@ -210,6 +209,10 @@ namespace ConnectFoods.Manager
                 List<Tile> neighbors = FindNeighbors(tile);
                 if (neighbors.Count(n => n.IsSelected) > 2)
                 {
+                    DecreaseUserMoveCount();
+
+                    TakeScore(neighbors.Count(n => n.IsSelected));
+
                     if (_goalsRemainCount.ContainsKey(tile.Item.VariantKey))
                         DecreaseGoalCount(tile.Item.VariantKey, neighbors.Count(n => n.IsSelected));
 
@@ -219,9 +222,6 @@ namespace ConnectFoods.Manager
                             n.Explode();
                     });
 
-                    DecreaseUserMoveCount();
-                    
-                    TakeScore(neighbors.Count);
 
                 }
                 else
