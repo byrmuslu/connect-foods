@@ -16,6 +16,9 @@ Mekanik kısma gelecek olursak eğer komşuluklar için "Raycast" kullandım anc
 dizi üzerinden de komşuluklar hesaplanabilir. - Fizik kullanımının dezavantajları olduğunu düşünmekle beraber level design tarafında
 kolaylık sağladığından dolayı bu tarz oyunlarda "Raycast" kullanmayı tercih etmekteyim. 
 
+"Level" tarafında ise "ScriptableObject" kullanarak proje içerisinden istenen düzenleme ve eklemelerin yapılabilmesine olanak tanıdım.
+<br>"Resources/Levels" yolu izlenerek görülebilir ve istenen taktirde o klasöre başka herhangi biir değişikliğe gerek kalmadan yeni bir seviye daha eklenebilir.
+
 NOT : DatabaseDesign.png içersinde veri tabanı tasarımı resim olarak yer almaktadır.
 <br>NOT : Builds klasörü içerisinde *.apk yer almaktadır.
 <br>NOT : Oyun 1080x1920 çözünürlük baz alınarak yapılmıştır. Extra olarak çözünürlük için bir çalışmaya gidilmemiştir.
