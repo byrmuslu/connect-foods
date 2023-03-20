@@ -8,11 +8,15 @@ Detaylar için sözlü olarak görüşebilir ve tasarım üzerinde iyileştirme 
 Proje içerisinde FACADE doğrudan kullanmadım. Ancak "Event Driven" bir yapı izlediğimden
 ve kaynak yönetimini bütün olarak ele aldığımdan dolayı - "ResourcesManager" - "GameManager"'a bakarsanız
 eğer FACADE tasarım kalıbını dolaylı olarak işlediğimi göreceksinizdir.
+
 State tasarım kalıbını ise yine "Event Driven" yapı dolayısı ile çok fazla sisteme dahil etmeden kullandım diyebilirim.
 -Bu durumu istediğiniz taktirde yine sözlü olarak görüşebiliriz.
 
 Mekanik kısma gelecek olursak eğer komşuluklar için "Raycast" kullandım ancak kolay bir şekilde implemantasyon değiştirilerek 
 dizi üzerinden de komşuluklar hesaplanabilir. - Fizik kullanımının dezavantajları olduğunu düşünmekle beraber level design tarafında
 kolaylık sağladığından dolayı bu tarz oyunlarda "Raycast" kullanmayı tercih etmekteyim. 
+
+NOT : DatabaseDesign.png içersinde veri tabanı tasarımı resim olarak yer almaktadır.
+NOT : Builds klasörü içerisinde *.apk yer almaktadır.
 
 NOT : Kişisel işlerim sebebiyle görsel iyileştirmelere çok fazla odaklanamadım.
