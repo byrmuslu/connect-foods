@@ -18,5 +18,6 @@ kolaylık sağladığından dolayı bu tarz oyunlarda "Raycast" kullanmayı terc
 
 NOT : DatabaseDesign.png içersinde veri tabanı tasarımı resim olarak yer almaktadır.
 NOT : Builds klasörü içerisinde *.apk yer almaktadır.
+NOT : Oyun 1080x1920 çözünürlük baz alınarak yapılmıştır. Çözünürlük için bir çalışmaya gidilmemiştir.
 
 NOT : Kişisel işlerim sebebiyle görsel iyileştirmelere çok fazla odaklanamadım.
